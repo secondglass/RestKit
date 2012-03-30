@@ -35,6 +35,7 @@
 
 - (id)initWithBaseURLString:(NSString*)baseURLString resourcePath:(NSString*)resourcePath;
 - (id)initWithBaseURLString:(NSString*)baseURLString resourcePath:(NSString*)resourcePath queryParams:(NSDictionary*)queryParams;
+- (NSString *)host; 
 + (RKURL*)URLWithBaseURLString:(NSString*)baseURLString resourcePath:(NSString*)resourcePath;
 + (RKURL*)URLWithBaseURLString:(NSString*)baseURLString resourcePath:(NSString*)resourcePath queryParams:(NSDictionary*)queryParams;
 

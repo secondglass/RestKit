@@ -63,6 +63,15 @@
 	return self;
 }
 
+- (NSString *)host {
+    NSString *t_host = [super host];
+    if ([[self port] isEqualToNumber:[NSNumber numberWithInt:80]]) {
+        return t_host;
+    } else {
+        return [NSString stringWithFormat:@"%@:%@", t_host, [self port]];
+    }
+}
+
 - (void)dealloc {
 	[_baseURLString release];
 	_baseURLString = nil;
