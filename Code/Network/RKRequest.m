@@ -259,7 +259,9 @@
         NSDictionary *parameters = nil;
         if ([self.params isKindOfClass:[RKParams class]])
             parameters = [(RKParams *)self.params dictionaryOfPlainTextParams];
-        else 
+        else if ([self.params isKindOfClass:[NSDictionary class]])
+            parameters = (NSDictionary *) self.params;
+        else
             parameters = [_URL queryDictionary];
             
         if (self.method == RKRequestMethodPUT)
